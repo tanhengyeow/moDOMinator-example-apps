@@ -8,9 +8,7 @@
 2. npm run serve
 ```
 
-```
-3. Go to your browser and type in "localhost:8080" to your address bar.
-```
+3. Go to your browser and type in **localhost:8080** to your address bar.
 
 The following page will be loaded:
 
