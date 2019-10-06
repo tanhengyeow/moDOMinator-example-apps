@@ -29,6 +29,9 @@ Web vulnerablities that succeed will be reported in the browser console or shown
 
 ```
 1. npm install
+```
+
+```
 2. npm start
 ```
 
