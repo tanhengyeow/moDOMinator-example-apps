@@ -28,7 +28,10 @@ Web vulnerablities that succeed will be reported in the browser console or shown
 # Run locally
 
 ```
-npm start
+1. npm install
+2. npm start
 ```
 
-**-Work in Progress-**
+The following page will load in your browser:
+
+![react-standalone-readme](/images/react-standalone-readme.PNG)
