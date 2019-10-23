@@ -24,18 +24,6 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 
-# IDE - IntelliJ WebStorm
-.idea/workspace.xml
-.idea/Project - Example Apps.iml
-.idea/codeStyles/Project.xml
-.idea/dbnavigator.xml
-.idea/inspectionProfiles/Project_Default.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/workspace.xml
-modominator-react-example (custom)/package-lock.json
-
 # misc
 /.sass-cache
 /connect.lock
