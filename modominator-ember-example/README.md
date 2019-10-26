@@ -12,11 +12,11 @@ TODO: Save the alerts in the browser extension UI.
 npm start
 ```
 
-# Run locally
+# XSS
 
 ```
-To test script, type in the following input:
-<img src="a.jpg" onerror="alert('Hi! I am script and I bypassed angular security')">
+To test script, type in the following input:<img src="a.jpg" onerror="alert('Hi! I am script and I ember angular security')">
+
 ```
 
 **-Work in Progress-**

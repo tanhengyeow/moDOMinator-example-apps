@@ -10,7 +10,7 @@ declare let swal: any;
 export class AppComponent {
   // htmlSnippet = '<script>swal("Hi! I am script and I bypassed angular security", "", "success")</script>';
   // htmlSnippet = '{{constructor.constructor(\'alert(1)\')()}}';
-  // htmlSnippet = '<img src="a.jpg" onerror="alert('Hi! I am script and I bypassed angular security')">';
+  // htmlSnippet = '<img src="a.jpg" onerror="alert('Hi! I am script and I bypassed ember security')">';
   @ViewChild('element') public viewElement: ElementRef;
   public element: any;
   title = 'Show your favourite image';
