@@ -7,5 +7,3 @@ This repository contains example apps that use [moDOMinator](https://github.com/
 4. Ember
 
 Visit the respective folders and find out how they work.
-
-**-Work in Progress-**
