@@ -1,5 +1,7 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<section class="comments">
+  {{#each model as |comment|}}
+    {{comment-component name=comment.name
+                        photo=comment.photo text=comment.text}}
+  {{/each}}
+</section>​
+{{input value=text enter="update" placeholder="Enter Comment"}}
