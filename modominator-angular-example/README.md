@@ -4,19 +4,25 @@ This example uses [moDOMinator-chrome-extension](https://github.com/tanhengyeow/
 
 New DOM elements that are rendered will be scanned for web vulnerabilities. Web vulnerablities that succeed will be reported in the browser console or shown as a browser alert.
 
-TODO: Save the alerts in the browser extension UI.
-
 # Run locally
 
 ```
-npm start
+1. npm install
 ```
 
-# XSS
+```
+2. npm start
+```
 
 ```
-To test script, type in the following input:
+3. Go to your browser and type **localhost:4200** in the address bar to see the page.
+
+The following page will be loaded in your browser:
+
+![angular-readme](/images/angular-readme.PNG)
+```
+
+```
+4. To test script, type in the following input:
 <img src="a.jpg" onerror="alert('Hi! I am script and I bypassed angular security')">
 ```
-
-**-Work in Progress-**
