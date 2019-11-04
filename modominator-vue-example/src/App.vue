@@ -1,19 +1,31 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Show your favorite image</h1>
+    <input
+      placeholder="Paste your favorite image URL, like https://placeimg.com/320/320/any"
+      v-model="url"
+    />
+    <div v-html="image"></div>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import Vue from 'vue';
 
-export default {
+export default Vue.extend({
   name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      url: ''
+    };
+  },
+  computed: {
+    image(): string {
+      return this.url ? `<img src="${this.url}"/>` : '';
+    }
   }
-}
+});
 </script>
 
 <style>
