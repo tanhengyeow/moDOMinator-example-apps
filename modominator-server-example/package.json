@@ -1,0 +1,32 @@
+{
+  "name": "modominator-server-example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon",
+    "start": "tsc && node dist/server.js",
+    "build": "rimraf dist && tsc",
+    "prod:start": "cross-env NODE_ENV=production pm2 start dist/server.js",
+    "prod:stop": "pm2 delete dist/server.js",
+    "lint": "tslint -c tslint.json -p tsconfig.json -t stylish"
+  },
+  "dependencies": {
+    "@koa/router": "^8.0.2",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "knex": "^0.20.1",
+    "koa": "^2.10.0",
+    "koa-body": "^4.1.1",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/koa": "^2.0.51",
+    "@types/koa-router": "^7.0.42",
+    "@types/pg": "^7.11.2",
+    "nodemon": "^1.19.4",
+    "rimraf": "^3.0.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.4"
+  }
+}
