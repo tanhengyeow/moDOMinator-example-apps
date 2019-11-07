@@ -51,6 +51,7 @@ router.get('/articles/:id', async (ctx) => {
 
 /**
  * [PATCH: /articles/:id] Edit an article.
+ * [Params] title, content.
  */
 router.patch('/articles/:id', async (ctx) => {
   const body = ctx.request.body;

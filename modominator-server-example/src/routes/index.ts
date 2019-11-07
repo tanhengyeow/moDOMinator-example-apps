@@ -4,6 +4,7 @@ import * as koaBody from 'koa-body';
 import { HttpStatus } from '../types/http';
 import articlesRouter from './articles';
 import commentsRouter from './comments';
+import reviewsRouter from './reviews';
 
 const router = new Router();
 
@@ -48,6 +49,7 @@ router.use(async (ctx, next) => {
 // Add API routes.
 router.use(articlesRouter.routes());
 router.use(commentsRouter.routes());
+router.use(reviewsRouter.routes());
 
 // Add catch-all for API endpoints.
 router.all('*', (ctx) => {

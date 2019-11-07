@@ -20,11 +20,11 @@ router.get('/comments', async (ctx) => {
 
 /**
  * [POST: /comments] Create a new comment.
- * [Params] content.
+ * [Params] style, content.
  */
 router.post('/comments', async (ctx) => {
   const body = ctx.request.body;
-  const comment = await db.comments.createNewComment(body.content);
+  const comment = await db.comments.createNewComment(body.style, body.content);
 
   ctx.body = {
     code: HttpStatus.Ok,
@@ -51,10 +51,11 @@ router.get('/comments/:id', async (ctx) => {
 
 /**
  * [PATCH: /comments/:id] Edit a comment.
+ * [Params] style, content.
  */
 router.patch('/comments/:id', async (ctx) => {
   const body = ctx.request.body;
-  const comment = await db.comments.editComment(ctx.params.id, body.content);
+  const comment = await db.comments.editComment(ctx.params.id, body.style, body.content);
 
   if (!comment) {
     return { code: HttpStatus.NotFound };

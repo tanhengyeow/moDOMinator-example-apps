@@ -1,6 +1,6 @@
-export interface Comment {
+export interface Review {
   id: number;
-  style: string;
+  name: string;
   content: string;
   created_at: string;
 }

@@ -10,13 +10,21 @@ exports.up = async (knex) => {
 
   await knex.schema.createTable('comments', (table) => {
     table.bigIncrements();
+    table.string('style', 200);
+    table.text('content');
+    table.timestamp('created_at').defaultTo(knex.fn.now());
+  });
+
+  await knex.schema.createTable('reviews', (table) => {
+    table.bigIncrements();
+    table.string('name', 50);
     table.text('content');
     table.timestamp('created_at').defaultTo(knex.fn.now());
   });
 };
 
 exports.down = async (knex) => {
-  const tables = ['articles', 'comments'].reverse();
+  const tables = ['articles', 'comments', 'reviews'].reverse();
 
   console.log('[Migration] Rollback 20191105120000_initial');
   console.log('[Migration] Dropping tables: ' + tables.join(', '));

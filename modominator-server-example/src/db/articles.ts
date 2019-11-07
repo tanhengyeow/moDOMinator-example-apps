@@ -4,11 +4,13 @@ import db from './db';
 /**
  * Creates a new article.
  */
-export function createNewArticle(title: string, content: string): Promise<Article> {
-  return db
+export async function createNewArticle(title: string, content: string): Promise<Article> {
+  const res = await db
     .table('articles')
     .insert({ title, content })
-    .returning('*') as any;
+    .returning('*');
+
+  return res[0];
 }
 
 /**

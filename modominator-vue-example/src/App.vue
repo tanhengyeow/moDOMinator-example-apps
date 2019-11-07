@@ -1,40 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <h1>Show your favorite image</h1>
-    <input
-      placeholder="Paste your favorite image URL, like https://placeimg.com/320/320/any"
-      v-model="url"
-    />
-    <div v-html="image"></div>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <div class="app-name">moDOMinator</div>
+        </div>
+      </div>
+    </nav>
+    <div class="content-spacer"></div>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-3">
+          <NavigationMenu/>
+        </div>
+        <div class="column">
+          <router-view/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
+import NavigationMenu from '@/components/NavigationMenu.vue';
+
 export default Vue.extend({
   name: 'app',
-  data() {
-    return {
-      url: ''
-    };
-  },
-  computed: {
-    image(): string {
-      return this.url ? `<img src="${this.url}"/>` : '';
-    }
+  components: {
+    NavigationMenu
   }
 });
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.app-name {
+  padding: 6px;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.content-spacer {
+  height: 30px;
+}
+
+.fade-in-enter-active {
+  transition: opacity .2s;
+}
+.fade-in-enter, .fade-in-leave-to {
+  opacity: 0;
+}
+.fade-in-leave-active {
+  position: absolute;
+  overflow: hidden;
+  visibility: hidden;
 }
 </style>

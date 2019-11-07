@@ -4,11 +4,13 @@ import db from './db';
 /**
  * Creates a new comment.
  */
-export function createNewComment(content: string): Promise<Comment> {
-  return db
+export async function createNewComment(style: string, content: string): Promise<Comment> {
+  const res = await db
     .table('comments')
-    .insert({ content })
-    .returning('*') as any;
+    .insert({ style, content })
+    .returning('*');
+
+  return res[0];
 }
 
 /**
@@ -24,10 +26,10 @@ export function deleteComment(id: number): Promise<{}> {
 /**
  * Edits the comment with the given ID.
  */
-export function editComment(id: number, content: string): Promise<Comment> {
+export function editComment(id: number, style: string, content: string): Promise<Comment> {
   return db
     .table('comments')
-    .update({ content })
+    .update({ style, content })
     .where('id', id)
     .returning('*') as any;
 }
