@@ -15,6 +15,7 @@
         </div>
         <div class="column">
           <router-view/>
+          <div class="content-spacer"></div>
         </div>
       </div>
     </div>
