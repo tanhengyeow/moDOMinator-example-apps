@@ -1,4 +1,4 @@
-# modominator-react-example (standalone)
+# modominator-react-example
 
 Include [moDOMinator](https://github.com/tanhengyeow/moDOMinator) into components that you wish to scan for web vulnerabilities.
 
@@ -37,4 +37,4 @@ Web vulnerablities that succeed will be reported in the browser console or shown
 
 The following page will load in your browser:
 
-![react-standalone-readme](/images/react-standalone-readme.PNG)
+![react-readme](/images/react-readme.PNG)
