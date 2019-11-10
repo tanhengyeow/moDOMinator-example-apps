@@ -1,5 +1,4 @@
 import React from "react";
-import { scanElements } from "modominator";
 
 import "./App.css";
 
@@ -14,21 +13,6 @@ class App extends React.Component {
 
   handleChange(event) {
     this.setState({ value: event.target.value });
-  }
-
-  /**
-   * TODO: Expand this section to include other types of DOM elements.
-   */
-  scanSelectedElements() {
-    // Select DOM elements to scan.
-    const elements = document.querySelectorAll("input");
-
-    // Scans list of DOM elements for web vulnerabilities.
-    scanElements(elements);
-  }
-
-  componentDidMount() {
-    this.scanSelectedElements();
   }
 
   render() {
