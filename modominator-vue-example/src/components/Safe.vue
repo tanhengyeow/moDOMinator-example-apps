@@ -22,6 +22,20 @@
     </div>
 
     <div class="box">
+      <h5 class="title is-5">What is your favorite color?</h5>
+      <input
+        class="input"
+        placeholder="#000000"
+        v-model="color"
+      />
+      <template v-if="color">
+        <br/>
+        <br/>
+        <div class="color-display" :style="{ backgroundColor: color }"></div>
+      </template>
+    </div>
+
+    <div class="box">
       <h5 class="title is-5">Create a new review</h5>
       <div class="field">
         <label class="label" for="input-name">Your Name</label>
@@ -80,6 +94,7 @@
     data() {
       return {
         imageUrl: '',
+        color: '',
         isLoading: true,
         isLoadingMore: false,
         canLoadMore: true,
